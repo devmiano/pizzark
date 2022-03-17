@@ -1,0 +1,36 @@
+@use 'base';
+
+.hero {
+  background-image: url('/assets/images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  .content {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .title {
+      font-family: base.$cursive;
+      font-size: 11.089rem;
+      color: base.$yellow;
+      letter-spacing: 2px;
+    }
+
+    .text {
+      font-size: 2.618rem;
+      color: base.$light;
+      letter-spacing: 1px;
+      margin-top: -4.4rem;
+      text-transform: uppercase;
+    }
+  }
+}

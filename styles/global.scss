@@ -1,4 +1,7 @@
+// sass imports
+
 @use 'base';
+@use 'hero';
 
 // Reset styles
 *,
@@ -21,6 +24,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-size: 18px;
 }
 
 html:focus-within {
