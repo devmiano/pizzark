@@ -76,18 +76,16 @@ img {
 
 ::-webkit-scrollbar {
   width: 0.4rem;
-  
 }
 
 ::-webkit-scrollbar-track {
   background: base.$light;
-  margin: 0.1rem;
+  margin: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background: base.$yellow;
   border-radius: 0.2rem;
-  
 }
 
 ::-webkit-scrollbar-thumb:hover {
