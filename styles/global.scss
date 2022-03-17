@@ -1,5 +1,7 @@
+@use 'base';
+
 * {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: base.$serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
