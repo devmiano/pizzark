@@ -1,0 +1,55 @@
+@use 'base';
+
+.catalog {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .store {
+    background-color: base.$cream;
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+
+    .title {
+      font-family: base.$cursive;
+      font-size: 4.236rem;
+      color: base.$dark;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 1rem;
+    }
+    .menu {
+      margin: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .card {
+        margin: 1rem;
+        width: 480px;
+        height: 240px;
+        background-color: base.$light;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:hover {
+          border: 1px solid base.$yellow;
+        }
+
+        .image {
+          height: 100%;
+        }
+      }
+    }
+  }
+  .orders {
+    background-color: base.$light;
+    width: 20%;
+    height: 100%;
+  }
+}

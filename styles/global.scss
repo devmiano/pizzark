@@ -2,6 +2,7 @@
 
 @use 'base';
 @use 'hero';
+@use 'vendor';
 
 // Reset styles
 *,
@@ -71,4 +72,24 @@ select {
 
 img {
   image-rendering: -webkit-optimize-contrast;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: base.$light;
+  margin: 0.1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: base.$yellow;
+  border-radius: 0.2rem;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: base.$purple;
 }
