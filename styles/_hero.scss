@@ -33,4 +33,14 @@
       text-transform: uppercase;
     }
   }
+  .catalog {
+    padding: 0.5rem;
+
+    .icon {
+      height: 3rem;
+      position: absolute;
+      bottom: 2rem;
+      cursor: pointer;
+    }
+  }
 }
