@@ -24,7 +24,7 @@
     .close {
       background-color: base.$yellow;
       color: base.$purple;
-      padding: 0 0.7rem;
+      padding: 1rem;
       float: right;
       font-size: 28px;
       font-weight: bold;
@@ -36,6 +36,10 @@
         color: base.$dark;
         text-decoration: none;
         cursor: pointer;
+      }
+
+      .icon {
+        height: 2rem;
       }
     }
   }
