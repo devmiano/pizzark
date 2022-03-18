@@ -178,7 +178,7 @@
 
           <div class="footer">
             <button class="button">
-              Add to order&emsp;KES <span>2499</span>
+              Add to order&emsp;KES <span id="pepperoniOrder">2499</span>
             </button>
           </div>
         </form>
@@ -196,7 +196,7 @@
           <!-- options -->
           <div class="options">
             <h4>Choose your preferred option</h4>
-            <select name="options" id="options">
+            <select name="options" id="hawaiianOptions">
               <option value="small">
                 Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 549
               </option>
@@ -215,7 +215,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="crust">
+            <select name="options" id="hawaiianCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
@@ -232,18 +232,25 @@
           <div class="options">
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
-              <input type="checkbox" id="beef" name="beef" value="beef" />
-              <label for="beef">Beef ham&emsp;&emsp;&emsp;&ensp; KES 199</label>
+              <input type="checkbox" id="ham" name="ham" value="ham" />
+              <label for="ham">Beef ham&emsp;&emsp;&emsp;&ensp; KES 199</label>
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
-              <label for="cheese">Pineapples&emsp;&emsp;&emsp;KES 149</label>
+              <input
+                type="checkbox"
+                id="pineapples"
+                name="pineapples"
+                value="pineapples"
+              />
+              <label for="pineapples"
+                >Pineapples&emsp;&emsp;&emsp;KES 149</label
+              >
             </div>
           </div>
 
           <div class="footer">
             <button class="button">
-              Add to order&emsp;KES <span>2499</span>
+              Add to order&emsp;KES <span id="hawaiianOrder">2499</span>
             </button>
           </div>
         </form>
@@ -261,7 +268,7 @@
           <!-- options -->
           <div class="options">
             <h4>Choose your preferred option</h4>
-            <select name="options" id="options">
+            <select name="options" id="chickenOptions">
               <option value="small">
                 Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 599
               </option>
@@ -280,7 +287,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="crust">
+            <select name="options" id="chickenCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
@@ -297,24 +304,29 @@
           <div class="options">
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
-              <input type="checkbox" id="beef" name="beef" value="beef" />
-              <label for="beef"
+              <input
+                type="checkbox"
+                id="chicken"
+                name="chicken"
+                value="chicken"
+              />
+              <label for="chicken"
                 >Grilled chicken&emsp;&emsp;&emsp;&ensp; KES 199</label
               >
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
-              <label for="cheese">Sweeet corn&emsp;&emsp;&emsp;KES 149</label>
+              <input type="checkbox" id="corn" name="corn" value="corn" />
+              <label for="corn">Sweet corn&emsp;&emsp;&emsp;KES 149</label>
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
-              <label for="cheese">Red onions&emsp;&emsp;&emsp;KES 99</label>
+              <input type="checkbox" id="onions" name="onions" value="onions" />
+              <label for="onions">Red onions&emsp;&emsp;&emsp;KES 99</label>
             </div>
           </div>
 
           <div class="footer">
             <button class="button">
-              Add to order&emsp;KES <span>2499</span>
+              Add to order&emsp;KES <span id="chickenOrder">2499</span>
             </button>
           </div>
         </form>
@@ -332,7 +344,7 @@
           <!-- options -->
           <div class="options">
             <h4>Choose your preferred option</h4>
-            <select name="options" id="options">
+            <select name="options" id="veggieOptions">
               <option value="small">
                 Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 399
               </option>
@@ -351,7 +363,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="crust">
+            <select name="options" id="veggieCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 49
               </option>
@@ -368,24 +380,41 @@
           <div class="options">
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
-              <input type="checkbox" id="beef" name="beef" value="beef" />
-              <label for="beef"
+              <input
+                type="checkbox"
+                id="peppers"
+                name="peppers"
+                value="peppers"
+              />
+              <label for="peppers"
                 >Green peppers&emsp;&emsp;&emsp;&ensp; KES 49</label
               >
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
-              <label for="cheese">Mushrooms&emsp;&emsp;&emsp;KES 99</label>
+              <input
+                type="checkbox"
+                id="mushrooms"
+                name="mushrooms"
+                value="mushrooms"
+              />
+              <label for="mushrooms">Mushrooms&emsp;&emsp;&emsp;KES 99</label>
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
-              <label for="cheese">Fresh tomatoes&emsp;&emsp;&emsp;KES 49</label>
+              <input
+                type="checkbox"
+                id="tomatoes"
+                name="tomatoes"
+                value="tomatoes"
+              />
+              <label for="tomatoes"
+                >Fresh tomatoes&emsp;&emsp;&emsp;KES 49</label
+              >
             </div>
           </div>
 
           <div class="footer">
             <button class="button">
-              Add to order&emsp;KES <span>2499</span>
+              Add to order&emsp;KES <span id="veggieOrder">2499</span>
             </button>
           </div>
         </form>
