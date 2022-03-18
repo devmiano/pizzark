@@ -1,5 +1,7 @@
 @use 'base';
 
+$checkbox-width: 24px;
+
 .modal {
   display: none;
   position: fixed;
@@ -14,32 +16,158 @@
   background-color: rgba(0, 0, 0, 0.4);
 
   .content {
-    background-color: base.$cream;
+    background-color: base.$light;
     margin: auto;
-    padding: 1rem;
     border: 2px solid base.$glow;
     border-radius: 4px;
-    width: 80%;
+    width: 40%;
+    height: 84%;
     overflow-y: scroll;
     .close {
       background-color: base.$yellow;
       color: base.$purple;
       padding: 1rem;
       float: right;
-      font-size: 28px;
-      font-weight: bold;
       border-radius: 4px;
+      margin: 1rem;
 
       &:hover,
       &:focus {
         background-color: base.$glow;
         color: base.$dark;
-        text-decoration: none;
         cursor: pointer;
       }
 
       .icon {
-        height: 2rem;
+        height: 1rem;
+      }
+    }
+
+    .form {
+      width: 100%;
+      .title {
+        font-family: base.$sans;
+        font-size: 1.77rem;
+        color: base.$purple;
+        margin: 0;
+        letter-spacing: 0.1px;
+        padding: 0.5rem 1rem;
+      }
+      .subtitle {
+        font-family: base.$sans;
+        font-size: 1rem;
+        color: base.$red;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+      }
+
+      .options {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        h4 {
+          font-family: base.$sans;
+          font-size: 1rem;
+          color: base.$purple;
+          margin: 0;
+          text-align: left;
+          letter-spacing: 0.1px;
+          padding-bottom: 0.3rem;
+        }
+
+        select {
+          width: 90%;
+          appearance: none;
+          outline: none;
+          border: none;
+          background-color: transparent;
+          background-image: url('/assets/icons/caret.svg');
+          background-position: right 10px center;
+          background-repeat: no-repeat;
+          background-size: auto 50%;
+          font-size: 1rem;
+          color: base.$red;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::-ms-expand {
+            display: none;
+          }
+        }
+
+        .toppings {
+          color: base.$red;
+          position: relative;
+          display: block;
+
+          input[type='checkbox'] {
+            position: absolute;
+            left: -9999px;
+
+            & + label {
+              position: relative;
+              display: inline-block;
+              padding: 6px 10px 6px ($checkbox-width + 10);
+              cursor: pointer;
+
+              &:before {
+                display: block;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                border-radius: 2px;
+                margin: (-$checkbox-width/2) 0 0;
+                width: $checkbox-width;
+                height: $checkbox-width;
+                background-color: base.$yellow;
+                background-image: url('/assets/icons/plus-sm.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 0.8rem auto;
+                -webkit-background-size: 0.8rem auto;
+                -moz-background-size: 0.8rem auto;
+              }
+            }
+
+            &:checked + label {
+              &:before {
+                background-position: (-$checkbox-width) 0;
+              }
+            }
+          }
+        }
+      }
+      .footer {
+        width: 100%;
+        height: 5rem;
+        background: base.$cream;
+        margin-top: 1rem;
+
+        .button {
+          float: right;
+          margin: 1rem;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          font-weight: 500;
+          color: base.$purple;
+          background-color: base.$yellow;
+          outline: none;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          text-transform: uppercase;
+
+          span {
+            color: base.$dark;
+            font-weight: 700;
+          }
+        }
       }
     }
   }
