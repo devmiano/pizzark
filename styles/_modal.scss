@@ -45,6 +45,7 @@ $checkbox-width: 24px;
 
     .form {
       width: 100%;
+
       .title {
         font-family: base.$sans;
         font-size: 1.77rem;
@@ -65,7 +66,6 @@ $checkbox-width: 24px;
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         padding: 0.5rem 1rem;
         h4 {
           font-family: base.$sans;
