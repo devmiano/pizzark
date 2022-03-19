@@ -4,8 +4,8 @@ import $ from 'jquery';
 var hawaiianOrder = document.getElementById('hawaiianOrder');
 var hawaiianOption = document.getElementById('hawaiianOption');
 var hawaiianCrust = document.getElementById('hawaiianCrust');
-var ham = document.querySelector('.ham:checked');
-var pineapples = document.querySelector('.pineapples:checked');
+var hamTopping = document.querySelector('.ham:checked');
+var pineappleTopping = document.querySelector('.pineapples:checked');
 
 export function hawaiian() {
   hawaiianOrder.addEventListener('click', function (e) {

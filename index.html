@@ -20,8 +20,8 @@
     <section id="catalog" class="catalog">
       <div class="store">
         <h2 class="title">Today's Menu</h2>
-        <p id="output"></p>
         <div class="menu">
+          <!-- Pepperoni Card -->
           <div class="card">
             <img
               class="image"
@@ -46,6 +46,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Hawaiian Card -->
           <div class="card">
             <img
               class="image"
@@ -70,6 +72,8 @@
               </div>
             </div>
           </div>
+
+          <!-- BBQ Chicken Card -->
           <div class="card">
             <img class="image" src="/assets/images/chicken.png" alt="chicken" />
             <div class="content">
@@ -91,6 +95,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Veggie Card -->
           <div class="card">
             <img class="image" src="/assets/images/veggie.png" alt="veggie" />
             <div class="content">
@@ -114,61 +120,84 @@
           </div>
         </div>
       </div>
+
+      <!-- Orders -->
       <div class="orders">
         <div class="top">
           <h2 class="title">My Orders</h2>
           <div class="location">
             <p class="subtitle">Location:</p>
-            <span>Nairobi</span>
+            <span id="location">Nairobi</span>
           </div>
 
-          <div class="card">
+          <!-- Order Card -->
+
+          <div id="orderCard" class="card">
             <div class="items">
               <div class="options">
-                <p class="name">Hawaiian</p>
-                <p class="option">medium</p>
+                <p id="orderName" class="name">Hawaiian</p>
+                <p id="orderOption" class="option">medium</p>
               </div>
-              <p class="price">KES <span class="option-price">599</span></p>
+              <p class="price">
+                KES <span id="orderOptionPrice" class="option-price">599</span>
+              </p>
             </div>
             <div class="items">
               <div class="options">
                 <p class="name">Crust</p>
-                <p class="option">double</p>
+                <p id="orderCrustName" class="option">double</p>
               </div>
-              <p class="price">KES <span class="crust-price">99</span></p>
+              <p class="price">
+                KES <span id="orderCrustPrice" class="crust-price">99</span>
+              </p>
             </div>
             <div class="items">
               <div class="options">
                 <p class="name">Toppings</p>
-                <p class="option">medium</p>
+                <p id="orderToppingsName" class="option">medium</p>
               </div>
-              <p class="price">KES <span class="toppings-price">99</span></p>
+              <p class="price">
+                KES
+                <span id="orderToppingsPrice" class="toppings-price">99</span>
+              </p>
             </div>
             <div class="subtotal">
               <h4 class="name">Price</h4>
-              <p class="price">KES <span class="subtotal-price">499</span></p>
+              <p class="price">
+                KES <span id="orderTotal" class="subtotal-price">499</span>
+              </p>
             </div>
           </div>
         </div>
-        <div class="checkout">
+        <div id="orderCheckout" class="checkout">
           <div class="total">
             <div class="price">
               <p class="name">Subtotal</p>
-              <p class="total-price">KES <span class="st_price">2500</span></p>
+              <p class="total-price">
+                KES
+                <span id="orderCheckoutSubtotal" class="st_price">2500</span>
+              </p>
             </div>
             <div class="price">
               <p class="name">Delivery fee</p>
-              <p class="total-price">KES <span class="df_price">250</span></p>
+              <p class="total-price">
+                KES
+                <span id="orderCheckoutDeliveryFee" class="st_price">250</span>
+              </p>
             </div>
             <div class="price">
               <p class="name">Total</p>
-              <p class="total-price">KES <span class="t_price">2750</span></p>
+              <p id="orderCheckoutGrandTotal" class="total-price">
+                KES <span class="t_price">2750</span>
+              </p>
             </div>
           </div>
           <button id="checkout" class="checkout-btn">Checkout</button>
         </div>
       </div>
     </section>
+
+    <!-- Pepperoni Modal -->
     <section id="pepperoniModal" class="modal">
       <div class="content">
         <div id="pepperoniClose" class="close">
@@ -182,16 +211,16 @@
           <div class="options">
             <h4>Choose your preferred option</h4>
             <select name="option" id="pepperoniOption">
-              <option value="small">
+              <option value="499">
                 Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 499
               </option>
-              <option value="medium">
+              <option value="749">
                 Medium&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 749
               </option>
-              <option value="large">
+              <option value="1099">
                 Large &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 1099
               </option>
-              <option value="deluxe">
+              <option value="1399">
                 Deluxe&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 1399
               </option>
             </select>
@@ -201,13 +230,13 @@
           <div class="options">
             <h4>Choose your preferred crust</h4>
             <select name="crust" id="pepperoniCrust">
-              <option value="single">
+              <option value="99">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
-              <option value="double">
+              <option value="149">
                 Double&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 149
               </option>
-              <option value="mega">
+              <option value="199">
                 Mega &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 199
               </option>
             </select>
@@ -222,7 +251,7 @@
                 type="checkbox"
                 id="beef"
                 name="toppings"
-                value="beef"
+                value="199"
               />
               <label for="beef"
                 >Beef pepperoni&emsp;&emsp;&emsp;&ensp; KES 199</label
@@ -234,7 +263,7 @@
                 type="checkbox"
                 id="cheese"
                 name="toppings"
-                value="cheese"
+                value="149"
               />
               <label for="cheese"
                 >Mozerella cheese&emsp;&emsp;&emsp;KES 149</label
@@ -250,6 +279,8 @@
         </form>
       </div>
     </section>
+
+    <!-- Hawaiian Modal -->
     <section id="hawaiianModal" class="modal">
       <div class="content">
         <div id="hawaiianClose" class="close">
@@ -330,6 +361,8 @@
         </form>
       </div>
     </section>
+
+    <!-- BBQ Chicken Modal -->
     <section id="chickenModal" class="modal">
       <div class="content">
         <div id="chickenClose" class="close">
@@ -419,6 +452,8 @@
         </form>
       </div>
     </section>
+
+    <!-- Veggie Modal -->
     <section id="veggieModal" class="modal">
       <div class="content">
         <div id="veggieClose" class="close">
@@ -472,7 +507,7 @@
                 type="checkbox"
                 id="peppers"
                 name="toppings"
-                value="peppers"
+                value="49"
               />
               <label for="peppers"
                 >Green peppers&emsp;&emsp;&emsp;&ensp; KES 49</label
@@ -484,7 +519,7 @@
                 type="checkbox"
                 id="mushrooms"
                 name="toppings"
-                value="mushrooms"
+                value="99"
               />
               <label for="mushrooms">Mushrooms&emsp;&emsp;&emsp;KES 99</label>
             </div>
@@ -494,7 +529,7 @@
                 type="checkbox"
                 id="tomatoes"
                 name="toppings"
-                value="tomatoes"
+                value="49"
               />
               <label for="tomatoes"
                 >Fresh tomatoes&emsp;&emsp;&emsp;KES 49</label
@@ -504,7 +539,7 @@
 
           <div class="footer">
             <button id="veggieOrder" class="button">
-              Add to order&emsp;KES <span id="veggieSub">2499</span>
+              Add to order&emsp;KES <span id="veggieSubtotal">2499</span>
             </button>
           </div>
         </form>

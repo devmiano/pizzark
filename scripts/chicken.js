@@ -5,11 +5,11 @@ var chickenModal = document.getElementById('chickenModal');
 var chickenOrder = document.getElementById('chickenOrder');
 var chickenOption = document.getElementById('chickenOption');
 var chickenCrust = document.getElementById('chickenCrust');
-var chicken = document.querySelector('.chicken:checked');
-var corn = document.querySelector('.corn:checked');
-var onions = document.querySelector('.onions:checked');
+var chickenTopping = document.querySelector('.chicken:checked');
+var cornTopping = document.querySelector('.corn:checked');
+var onionTopping = document.querySelector('.onions:checked');
 
-export function chickenBbq() {
+export function chicken() {
   chickenOrder.addEventListener('click', function (e) {
     e.preventDefault();
     chickenModal.style.display = 'none';
