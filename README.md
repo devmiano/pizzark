@@ -1,4 +1,4 @@
-# Pizzark
+# Pizzark | Order a Pizza Online
 
 ## Author
 
