@@ -20,6 +20,7 @@
     <section id="catalog" class="catalog">
       <div class="store">
         <h2 class="title">Today's Menu</h2>
+        <p id="output"></p>
         <div class="menu">
           <div class="card">
             <img
@@ -127,7 +128,7 @@
           <!-- options -->
           <div class="options">
             <h4>Choose your preferred option</h4>
-            <select name="options" id="options">
+            <select name="options" id="pepperoniOptions">
               <option value="small">
                 Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 499
               </option>
@@ -146,7 +147,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="crust">
+            <select name="crust" id="pepperoniCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
@@ -163,13 +164,25 @@
           <div class="options">
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
-              <input type="checkbox" id="beef" name="beef" value="beef" />
+              <input
+                class="beef"
+                type="checkbox"
+                id="beef"
+                name="toppings"
+                value="beef"
+              />
               <label for="beef"
                 >Beef pepperoni&emsp;&emsp;&emsp;&ensp; KES 199</label
               >
             </div>
             <div class="toppings">
-              <input type="checkbox" id="cheese" name="cheese" value="cheese" />
+              <input
+                class="cheese"
+                type="checkbox"
+                id="cheese"
+                name="toppings"
+                value="cheese"
+              />
               <label for="cheese"
                 >Mozerella cheese&emsp;&emsp;&emsp;KES 149</label
               >
@@ -177,8 +190,8 @@
           </div>
 
           <div class="footer">
-            <button class="button">
-              Add to order&emsp;KES <span id="pepperoniOrder">2499</span>
+            <button id="pepperoniOrder" class="button">
+              Add to order&emsp;KES <span id="pepperoniSub">2499</span>
             </button>
           </div>
         </form>
@@ -215,7 +228,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="hawaiianCrust">
+            <select name="crust" id="hawaiianCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
@@ -232,14 +245,21 @@
           <div class="options">
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
-              <input type="checkbox" id="ham" name="ham" value="ham" />
+              <input
+                class="ham"
+                type="checkbox"
+                id="ham"
+                name="toppings"
+                value="ham"
+              />
               <label for="ham">Beef ham&emsp;&emsp;&emsp;&ensp; KES 199</label>
             </div>
             <div class="toppings">
               <input
+                class="pineapples"
                 type="checkbox"
                 id="pineapples"
-                name="pineapples"
+                name="toppings"
                 value="pineapples"
               />
               <label for="pineapples"
@@ -287,7 +307,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="chickenCrust">
+            <select name="crust" id="chickenCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
               </option>
@@ -305,9 +325,10 @@
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
               <input
+                class="chicken"
                 type="checkbox"
                 id="chicken"
-                name="chicken"
+                name="toppings"
                 value="chicken"
               />
               <label for="chicken"
@@ -315,11 +336,23 @@
               >
             </div>
             <div class="toppings">
-              <input type="checkbox" id="corn" name="corn" value="corn" />
+              <input
+                class="corn"
+                type="checkbox"
+                id="corn"
+                name="toppings"
+                value="corn"
+              />
               <label for="corn">Sweet corn&emsp;&emsp;&emsp;KES 149</label>
             </div>
             <div class="toppings">
-              <input type="checkbox" id="onions" name="onions" value="onions" />
+              <input
+                class="onions"
+                type="checkbox"
+                id="onions"
+                name="toppings"
+                value="onions"
+              />
               <label for="onions">Red onions&emsp;&emsp;&emsp;KES 99</label>
             </div>
           </div>
@@ -363,7 +396,7 @@
           <!-- crusts -->
           <div class="options">
             <h4>Choose your preferred crust</h4>
-            <select name="options" id="veggieCrust">
+            <select name="crust" id="veggieCrust">
               <option value="single">
                 Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 49
               </option>
@@ -381,9 +414,10 @@
             <h4>Choose your preferred toppings</h4>
             <div class="toppings">
               <input
+                class="peppers"
                 type="checkbox"
                 id="peppers"
-                name="peppers"
+                name="toppings"
                 value="peppers"
               />
               <label for="peppers"
@@ -392,18 +426,20 @@
             </div>
             <div class="toppings">
               <input
+                class="mushrooms"
                 type="checkbox"
                 id="mushrooms"
-                name="mushrooms"
+                name="toppings"
                 value="mushrooms"
               />
               <label for="mushrooms">Mushrooms&emsp;&emsp;&emsp;KES 99</label>
             </div>
             <div class="toppings">
               <input
+                class="tomatoes"
                 type="checkbox"
                 id="tomatoes"
-                name="tomatoes"
+                name="toppings"
                 value="tomatoes"
               />
               <label for="tomatoes"

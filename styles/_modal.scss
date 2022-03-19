@@ -105,41 +105,51 @@ $checkbox-width: 24px;
           position: relative;
           display: block;
 
-          input[type='checkbox'] {
-            position: absolute;
-            left: -9999px;
+          .beef,
+          .cheese,
+          .ham,
+          .pineapples,
+          .chicken,
+          .corn,
+          .onions,
+          .pepppers,
+          .mushrooms,
+          .tomatoes,
+          [type='checkbox'] {
+            // position: absolute;
+            // left: -9999px;
 
-            & + label {
-              position: relative;
-              display: inline-block;
-              padding: 6px 10px 6px ($checkbox-width * 2);
-              cursor: pointer;
+            // & + label {
+            //   position: relative;
+            //   display: inline-block;
+            //   padding: 6px 10px 6px ($checkbox-width * 2);
+            //   cursor: pointer;
 
-              &:before {
-                display: block;
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                border-radius: 2px;
-                margin: (-$checkbox-width/2) 0 0;
-                width: $checkbox-width;
-                height: $checkbox-width;
-                background-color: base.$yellow;
-                background-image: url('/assets/icons/plus-sm.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 0.8rem auto;
-                -webkit-background-size: 0.8rem auto;
-                -moz-background-size: 0.8rem auto;
-              }
-            }
+            //   &:before {
+            //     display: block;
+            //     content: '';
+            //     position: absolute;
+            //     left: 0;
+            //     top: 50%;
+            //     border-radius: 2px;
+            //     margin: (-$checkbox-width/2) 0 0;
+            //     width: $checkbox-width;
+            //     height: $checkbox-width;
+            //     background-color: base.$yellow;
+            //     background-image: url('/assets/icons/plus-sm.svg');
+            //     background-repeat: no-repeat;
+            //     background-position: center;
+            //     background-size: 0.8rem auto;
+            //     -webkit-background-size: 0.8rem auto;
+            //     -moz-background-size: 0.8rem auto;
+            //   }
+            // }
 
-            &:checked + label {
-              &:before {
-                background-position: (-$checkbox-width) 0;
-              }
-            }
+            // &:checked + label {
+            //   &:before {
+            //     background-position: (-$checkbox-width) 0;
+            //   }
+            // }
           }
         }
       }
