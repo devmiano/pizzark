@@ -3,11 +3,13 @@ import $ from 'jquery';
 // BBQ Chicken Function
 var chickenModal = document.getElementById('chickenModal');
 var chickenOrder = document.getElementById('chickenOrder');
-var chickenOption = document.getElementById('chickenOption');
-var chickenCrust = document.getElementById('chickenCrust');
-var chickenTopping = document.querySelector('.chicken:checked');
-var cornTopping = document.querySelector('.corn:checked');
-var onionTopping = document.querySelector('.onions:checked');
+var cOption = document.getElementById('chickenOption');
+var cCrust = document.getElementById('chickenCrust');
+var chickens = document.querySelector('.chicken:checked');
+var corn = document.querySelector('.corn:checked');
+var onion = document.querySelector('.onions:checked');
+var chickenToppings = 0;
+var chickenOption, chickenCrust, chickenTotal;
 
 export function chicken() {
   chickenOrder.addEventListener('click', function (e) {

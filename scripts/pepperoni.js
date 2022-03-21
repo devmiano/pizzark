@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 // Variables
 var pepperoniModal = document.getElementById('pepperoniModal');
 var pepperoniOrder = document.getElementById('pepperoniOrder');
