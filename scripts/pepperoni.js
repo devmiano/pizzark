@@ -56,7 +56,7 @@ export function pepperoni() {
     var orderToppings = addToPepperoniOrder.pepperoniToppings;
     var orderTotal = addToPepperoniOrder.pepperoniTotal;
 
-    const newOrder = `<div><p>Pizza</p><p>${orderName}</p></div><div><p>Crust</p><p>${orderCrust}</p></div><div><p>Toppings</p><p>${orderToppings}</p></div><div><p>Total</p><p>${orderTotal}</p></div>`;
+    const newOrder = `<div class="card-one"><div><p class="title-one">Pizza</p><p class="price-one">KES ${orderName}</p></div><div><p class="title-one">Crust</p><p class="price-one">KES ${orderCrust}</p></div><div><p class="title-one">Toppings</p><p class="price-one">KES ${orderToppings}</p></div><div><p class="title-one">Total</p><p class="price-one">KES ${orderTotal}</p></div></div>`;
 
     const list = document.querySelector('#orderCard');
     list.insertAdjacentHTML('afterbegin', newOrder);

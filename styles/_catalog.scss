@@ -172,16 +172,27 @@
       }
 
       .card {
-        border: 1px solid base.$naples;
-        border-radius: 5px;
-        cursor: pointer;
-        padding: 0.5rem;
+        .card-one {
+          border: 1px solid base.$naples;
+          border-radius: 5px;
+          cursor: pointer;
+          padding: 0.5rem;
+          margin: 0.5rem;
+          div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
 
-        div {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
+            .title-one {
+              color: base.$red;
+              font-weight: 500;
+            }
+            .price-one {
+              color: base.$purple;
+              font-weight: 600;
+            }
+          }
         }
       }
     }
