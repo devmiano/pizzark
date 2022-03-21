@@ -5,7 +5,13 @@ var pOption = document.getElementById('pepperoniOption');
 var pCrust = document.getElementById('pepperoniCrust');
 var beef = document.getElementById('beef');
 var cheese = document.getElementById('cheese');
+var locationOrder = document.getElementById('locationOrder');
+var locationModal = document.getElementById('locationModal');
+var location = document.getElementById('location');
+var checkout = document.getElementById('checkout');
 var pepperoniToppings = 0;
+var subtotal = 0;
+var grandTotal = 0;
 var pepperoniOption, pepperoniCrust, pepperoniTotal;
 
 // Pepperoni Function
@@ -54,9 +60,46 @@ export function pepperoni() {
     var orderToppings = addToPepperoniOrder.pepperoniToppings;
     var orderTotal = addToPepperoniOrder.pepperoniTotal;
 
-    const newOrder = `<div class="card-one"><div><p class="title-one">Pizza</p><p class="price-one">KES ${orderName}</p></div><div><p class="title-one">Crust</p><p class="price-one">KES ${orderCrust}</p></div><div><p class="title-one">Toppings</p><p class="price-one">KES ${orderToppings}</p></div><div><p class="title-one">Total</p><p class="price-one">KES ${orderTotal}</p></div></div>`;
+    const newOrder = `<div class="card-one"><div><p class="title-one">Pepperoni</p><p class="price-one">KES ${orderName}</p></div><div><p class="title-one">Crust</p><p class="price-one">KES ${orderCrust}</p></div><div><p class="title-one">Toppings</p><p class="price-one">KES ${orderToppings}</p></div><div><p class="title-one">Total</p><p class="price-one">KES ${orderTotal}</p></div></div>`;
 
     const list = document.querySelector('#orderCard');
     list.insertAdjacentHTML('afterbegin', newOrder);
+
+    subtotal = subtotal + orderTotal;
+    grandTotal = subtotal + 250;
+
+    const orderCheckout = document.querySelector('#orderCheckoutGrandTotal');
+    const newGrandTotal = `<span class="t_price">${grandTotal}</span>`;
+    orderCheckout.insertAdjacentHTML('afterbegin', newGrandTotal);
+
+    var subtotalText = `<p class="name">Subtotal</p><p class="total-price">KES <span class="st_price">${subtotal}</span></p>`;
+
+    var subtotalTrue = document.querySelector('#subtotalTrue');
+
+    subtotalTrue.insertAdjacentHTML('afterbegin', subtotalText);
+
+    locationOrder.addEventListener('click', function (e) {
+      e.preventDefault();
+      locationModal.style.display = 'none';
+
+      var locationText = `<p class="name">${location.value}</p><p class="total-price">KES <span class="st_price">250</span></p>`;
+      var locationEmpty = `<p>Please add a location</p>`;
+      var locationVal = document.querySelector('#locationVal');
+      var locationTrue = document.querySelector('#locationTrue');
+
+      if (location.value == '') {
+        locationVal.insertAdjacentHTML('afterbegin', locationEmpty);
+      } else {
+        locationTrue.insertAdjacentHTML('afterbegin', locationText);
+      }
+    });
+
+    checkout.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var checkoutVal = document.querySelector('#checkoutVal');
+
+      checkoutVal.innerHTML = '<p>Thanks for choosing Pizzark</p>';
+    });
   });
 }

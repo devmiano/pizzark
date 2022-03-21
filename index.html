@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/global.scss" />
+    <link rel="stylesheet" href="styles/global.scss" />
     <title>Pizzark | Order a Pizza Online</title>
   </head>
   <body>
@@ -46,78 +46,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Hawaiian Card -->
-          <div class="card">
-            <img
-              class="image"
-              src="/assets/images/hawaiian.png"
-              alt="hawaiian"
-            />
-            <div class="content">
-              <div class="header">
-                <h3 class="title">Hawaiian</h3>
-                <p class="subtitle">Beef and pineapples</p>
-              </div>
-              <div class="toppings">
-                <h4 class="title">Today's toppings</h4>
-                <p class="text">Beef ham</p>
-                <p class="text">Pineapples</p>
-              </div>
-              <div id="hawaiianBtn" class="cta">
-                <p class="price">From KES <span>549</span></p>
-                <button class="button">
-                  <img src="/assets/icons/plus.svg" alt="plus" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- BBQ Chicken Card -->
-          <div class="card">
-            <img class="image" src="/assets/images/chicken.png" alt="chicken" />
-            <div class="content">
-              <div class="header">
-                <h3 class="title">BBQ Chicken</h3>
-                <p class="subtitle">Chicken and sweet corn</p>
-              </div>
-              <div class="toppings">
-                <h4 class="title">Today's toppings</h4>
-                <p class="text">Grilled chicken</p>
-                <p class="text">Sweet corn</p>
-                <p class="text">Red onions</p>
-              </div>
-              <div id="chickenBtn" class="cta">
-                <p class="price">From KES <span>599</span></p>
-                <button class="button">
-                  <img src="/assets/icons/plus.svg" alt="plus" />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Veggie Card -->
-          <div class="card">
-            <img class="image" src="/assets/images/veggie.png" alt="veggie" />
-            <div class="content">
-              <div class="header">
-                <h3 class="title">Veggie</h3>
-                <p class="subtitle">Peppers and mushrooms</p>
-              </div>
-              <div class="toppings">
-                <h4 class="title">Today's toppings</h4>
-                <p class="text">Green peppers</p>
-                <p class="text">Mushrooms</p>
-                <p class="text">Fresh tomatoes</p>
-              </div>
-              <div id="veggieBtn" class="cta">
-                <p class="price">From KES <span>399</span></p>
-                <button class="button">
-                  <img src="/assets/icons/plus.svg" alt="plus" />
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -125,73 +53,23 @@
       <div class="orders">
         <div class="top">
           <h2 class="title">My Orders</h2>
-          <div class="location">
-            <p class="subtitle">Location:</p>
-            <span id="location">Nairobi</span>
-          </div>
 
           <!-- Order Card -->
 
-          <div id="orderCard" class="card">
-            <!-- <div class="items">
-              <div class="options">
-                <p id="orderName" class="name">Hawaiian</p>
-                <p id="orderOption" class="option">medium</p>
-              </div>
-              <p class="price">
-                KES <span id="orderOptionPrice" class="option-price">599</span>
-              </p>
-            </div>
-            <div class="items">
-              <div class="options">
-                <p class="name">Crust</p>
-                <p id="orderCrustName" class="option">double</p>
-              </div>
-              <p class="price">
-                KES <span id="orderCrustPrice" class="crust-price">99</span>
-              </p>
-            </div>
-            <div class="items">
-              <div class="options">
-                <p class="name">Toppings</p>
-                <p id="orderToppingsName" class="option">medium</p>
-              </div>
-              <p class="price">
-                KES
-                <span id="orderToppingsPrice" class="toppings-price">99</span>
-              </p>
-            </div>
-            <div class="subtotal">
-              <h4 class="name">Price</h4>
-              <p class="price">
-                KES <span id="orderTotal" class="subtotal-price">499</span>
-              </p>
-            </div> -->
-          </div>
+          <div id="orderCard" class="card"></div>
         </div>
         <div id="orderCheckout" class="checkout">
+          <p id="locationVal"></p>
+          <p id="checkoutVal"></p>
           <div class="total">
-            <div class="price">
-              <p class="name">Subtotal</p>
-              <p class="total-price">
-                KES
-                <span id="orderCheckoutSubtotal" class="st_price">2500</span>
-              </p>
-            </div>
-            <div class="price">
-              <p class="name">Delivery fee</p>
-              <p class="total-price">
-                KES
-                <span id="orderCheckoutDeliveryFee" class="st_price">250</span>
-              </p>
-            </div>
+            <div id="subtotalTrue" class="price"></div>
+            <div id="locationTrue" class="price"></div>
             <div class="price">
               <p class="name">Total</p>
-              <p id="orderCheckoutGrandTotal" class="total-price">
-                KES <span class="t_price">2750</span>
-              </p>
+              <p id="orderCheckoutGrandTotal" class="total-price">KES</p>
             </div>
           </div>
+          <button id="locationBtn" class="checkout-btn">Location</button>
           <button id="checkout" class="checkout-btn">Checkout</button>
         </div>
       </div>
@@ -278,271 +156,32 @@
       </div>
     </section>
 
-    <!-- Hawaiian Modal -->
-    <section id="hawaiianModal" class="modal">
+    <!-- Location Modal -->
+    <section id="locationModal" class="modal">
       <div class="content">
-        <div id="hawaiianClose" class="close">
+        <div id="locationClose" class="close">
           <img class="icon" src="/assets/icons/close.svg" alt="close" />
         </div>
         <form class="form">
-          <h2 class="title">Hawaiian</h2>
-          <p class="subtitle">Beef and pineapples</p>
-
-          <!-- options -->
-          <div class="options">
-            <h4>Choose your preferred option</h4>
-            <select name="option" id="hawaiianOption">
-              <option value="small">
-                Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 549
-              </option>
-              <option value="medium">
-                Medium&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 699
-              </option>
-              <option value="large">
-                Large &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 999
-              </option>
-              <option value="deluxe">
-                Deluxe&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 1149
-              </option>
-            </select>
+          <div class="location">
+            <label class="title" for="location">Location</label>
+            <input
+              class="control"
+              type="text"
+              id="location"
+              name="location"
+              value=""
+            />
           </div>
 
-          <!-- crusts -->
-          <div class="options">
-            <h4>Choose your preferred crust</h4>
-            <select name="crust" id="hawaiianCrust">
-              <option value="single">
-                Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
-              </option>
-              <option value="double">
-                Double&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 149
-              </option>
-              <option value="mega">
-                Mega &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 199
-              </option>
-            </select>
-          </div>
-
-          <!-- toppings -->
-          <div class="options">
-            <h4>Choose your preferred toppings</h4>
-            <div class="toppings">
-              <input
-                class="ham"
-                type="checkbox"
-                id="ham"
-                name="toppings"
-                value="ham"
-              />
-              <label for="ham">Beef ham&emsp;&emsp;&emsp;&ensp; KES 199</label>
-            </div>
-            <div class="toppings">
-              <input
-                class="pineapples"
-                type="checkbox"
-                id="pineapples"
-                name="toppings"
-                value="pineapples"
-              />
-              <label for="pineapples"
-                >Pineapples&emsp;&emsp;&emsp;KES 149</label
-              >
-            </div>
-          </div>
           <br />
-
           <div class="footer">
-            <button id="hawaiianOrder" class="button">
-              Add to order&emsp;KES <span id="hawaiianSub">2499</span>
-            </button>
+            <button id="locationOrder" class="button">Checkout</button>
           </div>
         </form>
       </div>
     </section>
 
-    <!-- BBQ Chicken Modal -->
-    <section id="chickenModal" class="modal">
-      <div class="content">
-        <div id="chickenClose" class="close">
-          <img class="icon" src="/assets/icons/close.svg" alt="close" />
-        </div>
-        <form class="form">
-          <h2 class="title">BBQ Chicken</h2>
-          <p class="subtitle">Chicken and sweet corn</p>
-
-          <!-- options -->
-          <div class="options">
-            <h4>Choose your preferred option</h4>
-            <select name="option" id="chickenOption">
-              <option value="small">
-                Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 599
-              </option>
-              <option value="medium">
-                Medium&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 799
-              </option>
-              <option value="large">
-                Large &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 1049
-              </option>
-              <option value="deluxe">
-                Deluxe&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 1249
-              </option>
-            </select>
-          </div>
-
-          <!-- crusts -->
-          <div class="options">
-            <h4>Choose your preferred crust</h4>
-            <select name="crust" id="chickenCrust">
-              <option value="single">
-                Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
-              </option>
-              <option value="double">
-                Double&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 149
-              </option>
-              <option value="mega">
-                Mega &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 199
-              </option>
-            </select>
-          </div>
-
-          <!-- toppings -->
-          <div class="options">
-            <h4>Choose your preferred toppings</h4>
-            <div class="toppings">
-              <input
-                class="chicken"
-                type="checkbox"
-                id="chicken"
-                name="toppings"
-                value="chicken"
-              />
-              <label for="chicken"
-                >Grilled chicken&emsp;&emsp;&emsp;&ensp; KES 199</label
-              >
-            </div>
-            <div class="toppings">
-              <input
-                class="corn"
-                type="checkbox"
-                id="corn"
-                name="toppings"
-                value="corn"
-              />
-              <label for="corn">Sweet corn&emsp;&emsp;&emsp;KES 149</label>
-            </div>
-            <div class="toppings">
-              <input
-                class="onions"
-                type="checkbox"
-                id="onions"
-                name="toppings"
-                value="onions"
-              />
-              <label for="onions">Red onions&emsp;&emsp;&emsp;KES 99</label>
-            </div>
-          </div>
-
-          <div class="footer">
-            <button id="chickenOrder" class="button">
-              Add to order&emsp;KES <span id="chickenSub">2499</span>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- Veggie Modal -->
-    <section id="veggieModal" class="modal">
-      <div class="content">
-        <div id="veggieClose" class="close">
-          <img class="icon" src="/assets/icons/close.svg" alt="close" />
-        </div>
-        <form class="form">
-          <h2 class="title">Veggie</h2>
-          <p class="subtitle">Pepper and mushrooms</p>
-
-          <!-- options -->
-          <div class="options">
-            <h4>Choose your preferred option</h4>
-            <select name="option" id="veggieOption">
-              <option value="small">
-                Small &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 399
-              </option>
-              <option value="medium">
-                Medium&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 549
-              </option>
-              <option value="large">
-                Large &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;KES 799
-              </option>
-              <option value="deluxe">
-                Deluxe&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 999
-              </option>
-            </select>
-          </div>
-
-          <!-- crusts -->
-          <div class="options">
-            <h4>Choose your preferred crust</h4>
-            <select name="crust" id="veggieCrust">
-              <option value="single">
-                Single &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 49
-              </option>
-              <option value="double">
-                Double&ensp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 99
-              </option>
-              <option value="mega">
-                Mega &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;KES 149
-              </option>
-            </select>
-          </div>
-
-          <!-- toppings -->
-          <div class="options">
-            <h4>Choose your preferred toppings</h4>
-            <div class="toppings">
-              <input
-                class="peppers"
-                type="checkbox"
-                id="peppers"
-                name="toppings"
-                value="49"
-              />
-              <label for="peppers"
-                >Green peppers&emsp;&emsp;&emsp;&ensp; KES 49</label
-              >
-            </div>
-            <div class="toppings">
-              <input
-                class="mushrooms"
-                type="checkbox"
-                id="mushrooms"
-                name="toppings"
-                value="99"
-              />
-              <label for="mushrooms">Mushrooms&emsp;&emsp;&emsp;KES 99</label>
-            </div>
-            <div class="toppings">
-              <input
-                class="tomatoes"
-                type="checkbox"
-                id="tomatoes"
-                name="toppings"
-                value="49"
-              />
-              <label for="tomatoes"
-                >Fresh tomatoes&emsp;&emsp;&emsp;KES 49</label
-              >
-            </div>
-          </div>
-
-          <div class="footer">
-            <button id="veggieOrder" class="button">
-              Add to order&emsp;KES <span id="veggieSubtotal">2499</span>
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
     <script type="module" src="/scripts/main.js"></script>
   </body>
 </html>
