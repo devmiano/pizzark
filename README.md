@@ -37,7 +37,8 @@ Order a pizza from our website and enjoy an awesome user experience.
 ## BDD
 
 > The web application will require the user to input a pizza option, a crust option and a range of toppings from our menu.
-> The application then outputs a personal message to the user indicating their name in the message in a sidebar.
+> The application then outputs the tpizza options, type and also outputs all pizza options.
+> If the user wants the pizzas delivered a fee is also added to the total amount.
 
 ---
 
