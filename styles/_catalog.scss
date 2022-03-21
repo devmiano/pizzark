@@ -177,78 +177,11 @@
         cursor: pointer;
         padding: 0.5rem;
 
-        &:hover {
-          background-color: base.$cream;
-        }
-
-        .items {
+        div {
           display: flex;
           flex-direction: row;
+          align-items: center;
           justify-content: space-between;
-          padding: 0.2rem 0.5rem;
-
-          .options {
-            .name {
-              font-family: base.$sans;
-              font-size: 1rem;
-              color: base.$purple;
-              margin: 0;
-              text-align: left;
-              letter-spacing: 0.1px;
-              font-weight: 600;
-            }
-            .option {
-              font-family: base.$sans;
-              font-size: 0.75rem;
-              color: base.$red;
-            }
-          }
-          .price {
-            font-family: base.$sans;
-            font-size: 1rem;
-            color: base.$purple;
-            margin: 0;
-            text-align: left;
-            letter-spacing: 0.1px;
-            font-weight: 600;
-
-            span {
-              font-weight: 700;
-              color: base.$dark;
-            }
-          }
-        }
-        .subtotal {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          padding: 0.3rem 0.5rem;
-          margin-top: 0.5rem;
-
-          .name {
-            font-family: base.$sans;
-            font-size: 1rem;
-            color: base.$purple;
-            margin: 0;
-            text-align: left;
-            letter-spacing: 0.1px;
-            font-weight: 600;
-          }
-
-          .price {
-            font-family: base.$sans;
-            font-size: 1rem;
-            color: base.$purple;
-            margin: 0;
-            text-align: left;
-            letter-spacing: 0.1px;
-            font-weight: 600;
-
-            .subtotal-price {
-              font-weight: 700;
-              color: base.$dark;
-            }
-          }
         }
       }
     }
