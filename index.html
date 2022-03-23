@@ -59,17 +59,31 @@
           <div id="orderCard" class="card"></div>
         </div>
         <div id="orderCheckout" class="checkout">
-          <p id="locationVal"></p>
-          <p id="checkoutVal"></p>
+          <p class="title" id="locationVal"></p>
+          <p class="title" id="checkoutVal"></p>
           <div class="total">
-            <div id="subtotalTrue" class="price"></div>
-            <div id="locationTrue" class="price"></div>
             <div class="price">
               <p class="name">Total</p>
-              <p id="orderCheckoutGrandTotal" class="total-price">KES</p>
+              <p class="total-price">
+                <span id="subtotalTrue" class="st_price"></span>
+              </p>
+            </div>
+            <div class="price">
+              <p id="locationTrue" class="name"></p>
+              <p class="total-price">
+                <span id="locationPrice" class="st_price"></span>
+              </p>
+            </div>
+            <div class="price">
+              <p class="name">Grand Total</p>
+              <p class="total-price">
+                <span id="orderCheckoutGrandTotal" class="st_price"></span>
+              </p>
             </div>
           </div>
-          <button id="locationBtn" class="checkout-btn">Location</button>
+          <button id="locationBtn" class="checkout-btn">
+            Update Location for Delivery
+          </button>
           <button id="checkout" class="checkout-btn">Checkout</button>
         </div>
       </div>
@@ -81,7 +95,7 @@
         <div id="pepperoniClose" class="close">
           <img class="icon" src="/assets/icons/close.svg" alt="close" />
         </div>
-        <form class="form">
+        <form id="form_data" class="form">
           <h2 class="title">Pepperoni</h2>
           <p class="subtitle">Beef and cheese</p>
 
@@ -164,7 +178,10 @@
         </div>
         <form class="form">
           <div class="location">
-            <label class="title" for="location">Location</label>
+            <label class="title" for="location"
+              >Need your meal delivered? <br />
+              Add a location</label
+            >
             <input
               class="control"
               type="text"
@@ -176,7 +193,7 @@
 
           <br />
           <div class="footer">
-            <button id="locationOrder" class="button">Checkout</button>
+            <button id="locationOrder" class="button">Add location</button>
           </div>
         </form>
       </div>

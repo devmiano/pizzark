@@ -198,6 +198,16 @@
     }
 
     .checkout {
+      .title {
+        text-align: center;
+        font-family: base.$sans;
+        font-size: 1.77rem;
+        color: base.$purple;
+        margin: 0;
+        letter-spacing: 0.1px;
+        padding-bottom: 1rem;
+        font-weight: 700;
+      }
       .total {
         border-radius: 4px;
         background-color: base.$cream;
